@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
+import ProjectsPage from './pages/ProjectsPage'
 import './portafolio.css'
 
 export default function App() {
@@ -13,10 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
 
-          <Route
-            path="/trabajos"
-            element={<h2>Trabajos del semestre</h2>}
-          />
+          <Route path="/trabajos" element={<ProjectsPage />} />
 
           <Route
             path="/contacto"
