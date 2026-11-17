@@ -343,3 +343,10 @@ main {
   text-underline-offset: 0.3em;
   font-weight: 700;
 }
+.github-projects {
+  margin-top: 3rem;
+}
+
+.github-projects > h2 {
+  margin-bottom: 1.5rem;
+}

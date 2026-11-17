@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
+import ProjectsPage from './pages/ProjectsPage'
+import ContactPage from './pages/ContactPage'
+import NotFoundPage from './pages/NotFoundPage'
 import './portafolio.css'
 
 export default function App() {
@@ -12,21 +15,9 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-
-          <Route
-            path="/trabajos"
-            element={<h2>Trabajos del semestre</h2>}
-          />
-
-          <Route
-            path="/contacto"
-            element={<h2>Contacto</h2>}
-          />
-
-          <Route
-            path="*"
-            element={<h2>404: página no encontrada</h2>}
-          />
+          <Route path="/trabajos" element={<ProjectsPage />} />
+          <Route path="/contacto" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
 
