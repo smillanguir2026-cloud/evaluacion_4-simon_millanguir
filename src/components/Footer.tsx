@@ -1,0 +1,10 @@
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <p>
+        &copy; 2026 Simón Millanguir - Universidad Católica de Temuco - Ingeniería
+        Civil en Informática (UCT)
+      </p>
+    </footer>
+  )
+}
