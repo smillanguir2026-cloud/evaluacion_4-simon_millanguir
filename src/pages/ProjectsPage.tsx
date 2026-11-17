@@ -1,4 +1,5 @@
 import ProjectCard from '../components/ProjectCard'
+import GitHubProjects from '../components/GitHubProjects'
 import { proyectos } from '../data/portafolioData'
 
 export default function ProjectsPage() {
@@ -11,6 +12,8 @@ export default function ProjectsPage() {
           <ProjectCard key={proyecto.id} proyecto={proyecto} />
         ))}
       </div>
+
+      <GitHubProjects />
     </section>
   )
 }
