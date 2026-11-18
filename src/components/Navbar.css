@@ -75,3 +75,35 @@
     gap: 1.5rem;
   }
 }
+.navbar__theme-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid #ffffff;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar__theme-button:hover,
+.navbar__theme-button[aria-pressed="true"] {
+  background-color: #ffffff;
+  color: #1a365d;
+}
+
+.navbar__theme-button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar__theme-button {
+    margin-top: 0;
+  }
+}

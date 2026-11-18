@@ -104,3 +104,39 @@ main {
     padding: 2.5rem;
   }
 }
+:root {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg-light: #0f172a;
+  --color-card-bg: #1e293b;
+  --color-text-main: #f1f5f9;
+  --color-text-muted: #cbd5e1;
+  --color-border: #64748b;
+  --color-accent: #93c5fd;
+}
+
+[data-theme="dark"] .section__title,
+[data-theme="dark"] .project-card__title,
+[data-theme="dark"] .contact__label {
+  color: #bfdbfe;
+}
+
+[data-theme="dark"] .section__title {
+  border-bottom-color: #93c5fd;
+}
+
+[data-theme="dark"] .contact__input,
+[data-theme="dark"] .contact__textarea {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+[data-theme="dark"] .contact__input::placeholder,
+[data-theme="dark"] .contact__textarea::placeholder {
+  color: #94a3b8;
+}
