@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 export interface ProjectItem {
   id: number
   titulo: string
@@ -28,4 +29,14 @@ export interface FetchState<T> {
 }
 export interface ProjectCardProps {
   proyecto: ProjectItem
+}
+export type Theme = 'light' | 'dark'
+
+export interface ThemeContextValue {
+  theme: Theme
+  toggleTheme: () => void
+}
+
+export interface ThemeProviderProps {
+  children: ReactNode
 }

@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom'
+import useTheme from '../hooks/useTheme'
 import './Navbar.css'
 
 export default function Navbar() {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <header className="navbar">
       <hgroup className="navbar__brand">
@@ -35,6 +38,15 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
+
+      <button
+        type="button"
+        className="navbar__theme-button"
+        onClick={toggleTheme}
+        aria-pressed={theme === 'dark'}
+      >
+        Tema oscuro
+      </button>
     </header>
   )
 }
