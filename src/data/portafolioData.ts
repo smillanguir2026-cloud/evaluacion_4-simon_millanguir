@@ -1,3 +1,4 @@
+import fabulaDisenador from '../assets/images/fabula-disenador.jpg'
 import type { ProjectItem } from '../types'
 
 export const proyectos: ProjectItem[] = [
@@ -8,7 +9,7 @@ export const proyectos: ProjectItem[] = [
     descripcion:
       'Lectura sobre el libro "La Fábula del Diseñador Centrado en el Usuario", enfocado en comprender mejor el rol del desarrollador Frontend y la experiencia de usuario.',
     tecnologias: ['UX / Investigación'],
-    imagen: '/images/fabula-disenador.jpg',
+    imagen: fabulaDisenador,
     imagenAlt:
       'Portada o ilustración de La Fábula del Diseñador Centrado en el Usuario',
   },

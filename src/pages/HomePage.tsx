@@ -1,3 +1,4 @@
+import perfil from '../assets/images/perfil.jpg'
 import './HomePage.css'
 
 export default function HomePage() {
@@ -7,7 +8,7 @@ export default function HomePage() {
 
       <div className="about__content">
         <img
-          src="/images/perfil.jpg"
+          src={perfil}
           alt="Fotografía de perfil de Simón Millanguir"
           className="about__image"
         />
