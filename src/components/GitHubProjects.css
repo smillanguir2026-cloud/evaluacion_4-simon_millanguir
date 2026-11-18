@@ -1,0 +1,37 @@
+.github-projects {
+  margin-top: 3rem;
+}
+
+.github-projects__title {
+  margin-bottom: 1.5rem;
+}
+
+.github-projects__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.github-projects__status {
+  margin-bottom: 1rem;
+}
+
+.github-projects__status--error {
+  color: #991b1b;
+  background-color: #fef2f2;
+  border: 1px solid #991b1b;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .github-projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .github-projects__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

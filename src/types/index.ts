@@ -26,3 +26,6 @@ export interface FetchState<T> {
   loading: boolean
   error: string | null
 }
+export interface ProjectCardProps {
+  proyecto: ProjectItem
+}

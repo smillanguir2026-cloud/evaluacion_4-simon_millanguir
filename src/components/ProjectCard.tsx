@@ -1,23 +1,29 @@
-import type { ProjectItem } from '../types'
+import type { ProjectCardProps } from '../types'
+import './ProjectCard.css'
 
-export default function ProjectCard({ proyecto }: { proyecto: ProjectItem }) {
+export default function ProjectCard({ proyecto }: ProjectCardProps) {
   return (
-    <article className="card-trabajos">
-      <h3>{proyecto.titulo}</h3>
+    <article className="project-card">
+      <h3 className="project-card__title">{proyecto.titulo}</h3>
 
       {proyecto.imagen && (
         <img
           src={proyecto.imagen}
           alt={proyecto.imagenAlt ?? proyecto.titulo}
-          className="img-trabajo"
+          className="project-card__image"
         />
       )}
 
-      <p>{proyecto.descripcion}</p>
+      <p className="project-card__description">
+        {proyecto.descripcion}
+      </p>
 
-      <ul className="badges" aria-label="Tecnologías y etiquetas del proyecto">
+      <ul
+        className="project-card__tags"
+        aria-label="Tecnologías y etiquetas del proyecto"
+      >
         {proyecto.tecnologias.map((tecnologia) => (
-          <li key={tecnologia} className="badge">
+          <li key={tecnologia} className="project-card__tag">
             {tecnologia}
           </li>
         ))}
@@ -26,7 +32,7 @@ export default function ProjectCard({ proyecto }: { proyecto: ProjectItem }) {
       {proyecto.urlProyecto && (
         <a
           href={proyecto.urlProyecto}
-          className="btn-proyecto"
+          className="project-card__link"
           target="_blank"
           rel="noopener noreferrer"
         >
