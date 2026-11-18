@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import type { ContactFormData } from '../types'
+import './ContactPage.css'
 
 export default function ContactPage() {
   const [formulario, setFormulario] = useState<ContactFormData>({
@@ -51,13 +52,17 @@ export default function ContactPage() {
   }
 
   return (
-    <section className="section contacto">
-      <h2>Contacto</h2>
+    <section className="section contact">
+      <h2 className="section__title contact__title">Contacto</h2>
 
-      <form className="form-contacto" onSubmit={prepararMensaje}>
-        <p className="form-group">
-          <label htmlFor="nombre">Nombre completo:</label>
+      <form className="contact__form" onSubmit={prepararMensaje}>
+        <p className="contact__field">
+          <label className="contact__label" htmlFor="nombre">
+            Nombre completo:
+          </label>
+
           <input
+            className="contact__input"
             type="text"
             id="nombre"
             name="nombre"
@@ -71,9 +76,13 @@ export default function ContactPage() {
           />
         </p>
 
-        <p className="form-group">
-          <label htmlFor="email">Correo electrónico:</label>
+        <p className="contact__field">
+          <label className="contact__label" htmlFor="email">
+            Correo electrónico:
+          </label>
+
           <input
+            className="contact__input"
             type="email"
             id="email"
             name="email"
@@ -87,9 +96,13 @@ export default function ContactPage() {
           />
         </p>
 
-        <p className="form-group">
-          <label htmlFor="mensaje">Mensaje:</label>
+        <p className="contact__field">
+          <label className="contact__label" htmlFor="mensaje">
+            Mensaje:
+          </label>
+
           <textarea
+            className="contact__textarea"
             id="mensaje"
             name="mensaje"
             rows={4}
@@ -102,13 +115,17 @@ export default function ContactPage() {
           />
         </p>
 
-        <button type="submit" className="btn-submit">
+        <button type="submit" className="contact__button">
           Preparar mensaje
         </button>
 
-        {error && <p role="alert">{error}</p>}
+        {error && (
+          <p className="contact__error" role="alert">
+            {error}
+          </p>
+        )}
 
-        <p role="status" aria-live="polite">
+        <p className="contact__status" role="status" aria-live="polite">
           {borradorUrl &&
             'Mensaje preparado. Ábrelo en Gmail para revisarlo y enviarlo.'}
         </p>
@@ -118,7 +135,7 @@ export default function ContactPage() {
             href={borradorUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-proyecto"
+            className="contact__link"
           >
             Abrir borrador en Gmail
           </a>
