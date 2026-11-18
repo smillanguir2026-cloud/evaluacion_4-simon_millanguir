@@ -1,16 +1,18 @@
+import './HomePage.css'
+
 export default function HomePage() {
   return (
-    <section className="section sobre-mi">
-      <h2>Sobre mí</h2>
+    <section className="section about">
+      <h2 className="section__title about__title">Sobre mí</h2>
 
-      <div className="sobre-mi-contenido">
+      <div className="about__content">
         <img
           src="/images/perfil.jpg"
           alt="Fotografía de perfil de Simón Millanguir"
-          className="img-perfil"
+          className="about__image"
         />
 
-        <p>
+        <p className="about__description">
           Soy estudiante de la Universidad Católica de Temuco y me estoy
           construyendo en desarrollo frontend. Busco satisfacer las necesidades
           del usuario creando el diseño más óptimo y con la mejor experiencia

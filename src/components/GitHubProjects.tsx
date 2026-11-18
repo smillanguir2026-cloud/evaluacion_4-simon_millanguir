@@ -28,7 +28,7 @@ export default function GitHubProjects() {
 
   return (
     <section className="github-projects">
-      <h2 className="github-projects__title">
+      <h2 className="section__title github-projects__title">
         Mis repositorios en GitHub
       </h2>
 
